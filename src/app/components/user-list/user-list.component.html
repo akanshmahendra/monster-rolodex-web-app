@@ -1,0 +1,14 @@
+<app-search (searchStr)="filterUsers($event)"></app-search>
+<section class="users section">
+  <div class="users-container container grid">
+    <article class="user-card" *ngFor="let user of filteredUsers" [@cardAnimation]>
+      <img [src]="user.image" class="img" alt="">
+      <h3 class="name">{{ user.firstName }}</h3>
+      <span class="email-address">{{ user.email }}</span>
+      <button class="button" (click)="openUserSideBar(user.id)">
+        Know More
+        <i class="ri-send-plane-line"></i>
+      </button>
+    </article>
+  </div>
+</section>

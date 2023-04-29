@@ -1,0 +1,74 @@
+:host {
+  width: 100%;
+}
+
+.user-info-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-block: 1.5rem;
+  .user-data-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    width: 100%;
+    .img-container {
+      padding-block: 1.5rem;
+      margin: 0 auto;
+      .user-img {
+        display: block;
+        width: 180px;
+        height: 180px;
+        overflow: hidden;
+        border-radius: 50%;
+        outline: 3px solid var(--first-color);
+        outline-offset: 5px;
+      }
+    }
+    .company-info {
+      text-align: center;
+      .name {
+        span {
+          font-weight: 400;
+        }
+      }
+      .designation {
+        font-size: var(--small-font-size);
+      }
+      .email {
+        font-size: var(--smaller-font-size);
+      }
+    }
+    .basic-info {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      width: 100%;
+      row-gap: 0.5rem;
+      .card {
+        position: relative;
+        background-color: var(--container-color);
+        box-shadow: 0 8px 10px rgba(201, 94, 44, 0.08);
+        text-align: center;
+        border-radius: 1rem;
+        width: 80%;
+        margin: 1rem auto;
+        padding-block: 0.25rem;
+        line-height: 2.5rem;
+        border-bottom: 5px solid var(--first-color);
+        label {
+          position: absolute;
+          font-size: var(--smaller-font-size);
+          left: 1rem;
+          top: -1.1rem;
+        }
+        p {
+          color: var(--title-color);
+        }
+      }
+    }
+  }
+}

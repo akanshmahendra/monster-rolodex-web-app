@@ -1,0 +1,103 @@
+.users {
+  .users-container {
+    grid-template-columns: 250px;
+    justify-content: center;
+    row-gap: 5.5rem;
+    .user-card {
+      position: relative;
+      background-color: var(--container-color);
+      padding: 7rem 2rem 1.5rem;
+      box-shadow: 0 8px 10px rgba(201, 94, 44, 0.08);
+      border-radius: 1rem;
+      text-align: center;
+      transition: background 0.4s;
+      .img {
+        width: 180px;
+        position: absolute;
+        inset: 0;
+        top: -5.5rem;
+        margin: 0 auto;
+        transition: transform 0.4s;
+        border-radius: 1rem;
+      }
+      .name {
+        font-size: var(--h3-font-size);
+        font-family: var(--title-font);
+        margin-bottom: 0.25rem;
+      }
+      .email-address {
+        display: block;
+        font-size: var(--smaller-font-size);
+        margin-bottom: 1rem;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+      .button {
+        display: inline-flex;
+        align-items: center;
+        column-gap: 0.5rem;
+        background-color: var(--first-color);
+        padding: 0.5rem 1rem;
+        border-radius: 4rem;
+        color: #fff;
+        font-weight: var(--font-medium);
+        transition: background 0.3s;
+        font-family: var(--body-font);
+        border: none;
+        outline: none;
+        i {
+          transition: transform 0.3s;
+        }
+        &:hover {
+          background-color: var(--first-color-alt);
+          cursor: pointer;
+        }
+      }
+      &:hover {
+        .img {
+          transform: translateY(-0.25rem);
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 767px) {
+  .users {
+    .users-container {
+      grid-template-columns: repeat(2, 250px);
+    }
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .users {
+    .users-container {
+      grid-template-columns: repeat(3, 262px);
+      column-gap: 3.5rem;
+      .user-card {
+        padding: 7.5rem 2rem 2rem;
+        border-radius: 1.5rem;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .users {
+    .users-container {
+      grid-template-columns: repeat(4, 262px);
+      column-gap: 3.5rem;
+    }
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .users {
+    .users-container {
+      grid-template-columns: repeat(5, 262px);
+      column-gap: 3.5rem;
+    }
+  }
+}

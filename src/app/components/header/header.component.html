@@ -1,0 +1,26 @@
+<header class="header" id="header">
+  <nav class="nav container">
+    <a href="#" class="logo">
+      Monsters Rolodex
+    </a>
+    <!-- <div class="menu" [ngClass]="{ 'show-menu' : mobileMenuOpened }">
+      <ul class="list">
+        <li class="item">
+          <a class="link" [routerLink]="['/']" routerLinkActive="active-link">Home</a>
+        </li>
+        <li class="item">
+          <a class="link" [routerLink]="['/']" routerLinkActive="active-link">About Us</a>
+        </li>
+      </ul>
+      <div class="close" (click)="toggleMenu()">
+        <i class="ri-close-line"></i>
+      </div>
+    </div> -->
+    <div class="buttons">
+      <i class="change-theme" [ngClass]="currentTheme == 'dark' ? 'ri-sun-line' : 'ri-moon-line'" (click)="toggleTheme()"></i>
+      <div class="toggle" (click)="toggleMenu()">
+        <i class="ri-apps-2-line"></i>
+      </div>
+    </div>
+  </nav>
+</header>

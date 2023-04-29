@@ -1,0 +1,30 @@
+<section class="user-info-section section">
+  <div class="user-data-container">
+    <div class="img-container">
+      <img [src]="user.image" class="user-img" alt="">
+    </div>
+    <div class="company-info">
+      <h2 class="name">{{ user.firstName }} <span>{{ user.lastName }}</span></h2>
+      <p class="designation">{{ user.company.title }}</p>
+      <span class="email">{{ user.email }}</span>
+    </div>
+    <div class="basic-info">
+      <div class="card">
+        <label>AGE</label>
+        <p>34</p>
+      </div>
+      <div class="card">
+        <label>DATE OF BIRTH</label>
+        <p>{{ user.birthDate | date: 'mediumDate' }}</p>
+      </div>
+      <div class="card">
+        <label>COMPANY</label>
+        <p>{{ user.company.name }}</p>
+      </div>
+      <div class="card">
+        <label>UNIVERSITY</label>
+        <p>{{ user.university }}</p>
+      </div>
+    </div>
+  </div>
+</section>
